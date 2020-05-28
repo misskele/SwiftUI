@@ -14,21 +14,30 @@ struct Person {
 }
 struct ContentView: View {
     
-    var dataArr:[Person] = [Person.init(name: "1号", heigh: 170),
+    @State var dataArr:[Person] = [Person.init(name: "1号", heigh: 170),
                    Person.init(name: "2号", heigh: 180),
                    Person.init(name: "3号", heigh: 190)
     ]
     
     var body: some View {
-        //id表示每条数据唯一标识,数据源之间不可重复,不然会覆盖重复显示的
-        List(dataArr,id: \.name){ data in
-            HStack {
-                Text("姓名:" + data.name)
-                Text("身高:" + String(data.heigh)).foregroundColor(.red)
-            }
+        NavigationView{
+            //id表示每条数据唯一标识,数据源之间不可重复,不然会覆盖重复显示的
+            List(dataArr,id: \.name){ data in
+                HStack {
+                    Text("姓名:" + data.name)
+                    Text("身高:" + String(data.heigh)).foregroundColor(.red)
+                }
+            }.navigationBarTitle(Text("表格").foregroundColor(.red), displayMode: .inline)
+                .navigationBarItems(trailing: Button(action: addPerson, label: {Text("Add")}))
+        }
+    }
+    func addPerson() {
+        if let p = dataArr.randomElement() {//获取一个随机元素
+            dataArr.append(p)
         }
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
