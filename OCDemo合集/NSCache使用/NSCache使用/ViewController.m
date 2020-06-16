@@ -18,10 +18,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    //NSCache 存储key-value对,类似于NSDictionary
+    //与 字典的区别
+    /*NSCache 1.有缓存清除策略 确保不会占用过多的系统内存
+     2.线程安全 可以在不同的线程增加,修改,删除 缓存中的对象,不需要锁定缓存区域
+     3.键对象不会像 NSMutableDictionary 中那样被复制。（键不需要实现 NSCopying 协议）
+    */
     self.cache =[[NSCache alloc]init];
-    self.cache.countLimit = 3;//数量限制
-    self.cache.totalCostLimit = 300;//容量限制
+    self.cache.countLimit = 3;//数量限制 默认0 不限制
+    self.cache.totalCostLimit = 300;//容量限制  默认0 不限制
     self.cache.delegate = self;
     [self.cache setName:@"cache234234"];
     [self.cache setObject:@"0" forKey:@"123--0" cost:12];//cost 是该对象占用的空间大小
