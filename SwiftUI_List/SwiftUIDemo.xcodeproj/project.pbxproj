@@ -15,7 +15,6 @@
 		BF1DA59B247F9BD3004A462F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF1DA599247F9BD3004A462F /* LaunchScreen.storyboard */; };
 		BF1DA5A6247F9BD3004A462F /* SwiftUIDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DA5A5247F9BD3004A462F /* SwiftUIDemoTests.swift */; };
 		BF1DA5B1247F9BD3004A462F /* SwiftUIDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DA5B0247F9BD3004A462F /* SwiftUIDemoUITests.swift */; };
-		BF1DA5BF247FA5B2004A462F /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF1DA5BE247FA5B2004A462F /* 1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +49,6 @@
 		BF1DA5AC247F9BD3004A462F /* SwiftUIDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF1DA5B0247F9BD3004A462F /* SwiftUIDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDemoUITests.swift; sourceTree = "<group>"; };
 		BF1DA5B2247F9BD3004A462F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF1DA5BE247FA5B2004A462F /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +102,6 @@
 				BF1DA58E247F9BD1004A462F /* AppDelegate.swift */,
 				BF1DA590247F9BD1004A462F /* SceneDelegate.swift */,
 				BF1DA592247F9BD1004A462F /* ContentView.swift */,
-				BF1DA5BE247FA5B2004A462F /* 1.jpg */,
 				BF1DA594247F9BD3004A462F /* Assets.xcassets */,
 				BF1DA599247F9BD3004A462F /* LaunchScreen.storyboard */,
 				BF1DA59C247F9BD3004A462F /* Info.plist */,
@@ -244,7 +241,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF1DA59B247F9BD3004A462F /* LaunchScreen.storyboard in Resources */,
-				BF1DA5BF247FA5B2004A462F /* 1.jpg in Resources */,
 				BF1DA598247F9BD3004A462F /* Preview Assets.xcassets in Resources */,
 				BF1DA595247F9BD3004A462F /* Assets.xcassets in Resources */,
 			);
@@ -443,6 +439,7 @@
 				DEVELOPMENT_TEAM = 2G9DF5JZCK;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftUIDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,7 +447,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaili.SwiftUIDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -463,6 +460,7 @@
 				DEVELOPMENT_TEAM = 2G9DF5JZCK;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftUIDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -470,7 +468,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaili.SwiftUIDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
